@@ -6,7 +6,7 @@
 # /__/     \__\ | _| `._____| \______||__|  |__|    |__| |_______/    |__| \__|     |__|        |__|  |__| /__/     \__\ | _| `._____||_______/ 
 #                                                                                                                                             
 
-# MAIN INSTALLER SCRIPT
+# MAIN INSTALLER SCRIPT v1.0 for x86_64-efi
 
 echo "ARCH ISN'T HARD Arch Linux installer v1.0-x86_64-efi"
 echo "------------------------------------"
