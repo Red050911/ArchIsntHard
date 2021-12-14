@@ -23,7 +23,7 @@ if echo "$b" | grep -q -E 'loop*'
 	echo "error: cannot install to loopback drives"
 	exit 0
 elif lsblk -e7 -ndo  NAME /dev/$b | grep -q $b; then
-  echo "Drive has been validated! Continuing..."
+  echo "Drive has been successfully validated! Continuing..."
 else
 	echo "error: drive is not valid"
 	exit 0
