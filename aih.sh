@@ -19,6 +19,10 @@ echo "Available drives:"
 lsblk -e7 -ndo NAME,SIZE
 read b
 # check drive name
-if lsblk -e7 -ndo  NAME /dev/$b | grep -q $b; then
-   echo "Drive is valid!"
+if [ $b = loop* ]; then
+	echo "error: cannot install to loopback drives"
+elif lsblk -e7 -ndo  NAME /dev/$b | grep -q $b; then
+  echo "Drive is valid!"
+else
+	echo "error: drive is not valid" 
 fi
