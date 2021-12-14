@@ -16,9 +16,9 @@ echo "Do you want a swap partition (These can be used to archive RAM data that i
 read a
 echo "What drive would you like to install to?"
 echo "Available drives:"
-lsblk -ndo NAME
+lsblk -e7 -ndo NAME,SIZE
 read b
 # check drive name
-if lsblk -ndo NAME /dev/$b | grep -q $b; then
+if lsblk -e7 -ndo  NAME /dev/$b | grep -q $b; then
    echo "Drive is valid!"
 fi
